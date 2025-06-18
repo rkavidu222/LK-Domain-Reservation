@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DomainCategory;
+use App\Http\Controllers\OtpController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,10 +23,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/confirmation', function () {
-    return view('confirmation');
-});
-
 
 
 Route::get('/domain-category', [DomainCategory::class, 'show'])->name('domain.category');
@@ -32,3 +30,12 @@ Route::get('/domain-category', [DomainCategory::class, 'show'])->name('domain.ca
 
 Route::get('/contact-information', [ContactController::class, 'showForm'])->name('contact.page');
 Route::post('/contact-information', [ContactController::class, 'submit'])->name('contact.submit');
+
+
+Route::post('/payment-details', [OtpController::class, 'paymentDetails'])->name('payment.details');
+
+
+Route::get('/skip-payment', [PaymentController::class, 'skipPayment'])->name('payment.skip');
+Route::get('/confirmation', function () {
+    return view('layouts.confirmation');
+});

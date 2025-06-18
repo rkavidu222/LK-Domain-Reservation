@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -10,4 +10,13 @@ class ContactController extends Controller
     {
         return view('layouts.contactInfomation');
     }
+
+    public function submit(Request $request)
+    {
+
+        return view('layouts.otpVerification');
+    }
+
+
+
 }
