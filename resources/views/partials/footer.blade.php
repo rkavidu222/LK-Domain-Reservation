@@ -83,7 +83,7 @@
        @focusin="visible = true"
        @focusout="visible = false"
   >
-    <a href="https://wa.me/94774233244" target="_blank" rel="noopener noreferrer" class="animate-bounce block">
+    <a href="https://wa.me/+94774233244" target="_blank" rel="noopener noreferrer" class="animate-bounce block">
       <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
     </a>
     <div class="tooltip" :class="{ 'show': visible }" style="right: 60px; top: 10px;">
@@ -125,8 +125,8 @@
           <h2 class="text-xl font-bold text-blue-600 mb-4">Need Help from ServerClub?</h2>
           <div class="space-y-4 text-sm text-gray-700">
             <div class="flex items-center space-x-2"><span>📞</span><span><strong>Sales:</strong> 0117109693 (9AM–5PM)</span></div>
-            <div class="flex items-center space-x-2"><span>💬</span><a href="https://wa.me/947117109693" class="text-blue-600 underline" target="_blank">Chat on WhatsApp</a></div>
-            <div class="flex items-center space-x-2"><span>📧</span><a href="mailto:support@serverclub.lk" class="text-blue-600 underline">service@serverclub.lk</a></div>
+            <div class="flex items-center space-x-2"><span>💬</span><a href="https://wa.me/+94774233244" class="text-blue-600 underline" target="_blank">Chat on WhatsApp</a></div>
+            <div class="flex items-center space-x-2"><span>📧</span><a href="mailto:service@serverclub.lk" class="text-blue-600 underline">service@serverclub.lk</a></div>
             <div class="flex items-center space-x-2"><span>👨‍💻</span><span><strong>Support:</strong> 24/7 Customer Support</span></div>
           </div>
           <button @click="open = false" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full">Close</button>

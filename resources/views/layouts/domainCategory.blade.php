@@ -5,6 +5,29 @@
 @section('head')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <style>
+    body {
+        background-color: #f3f6fa;
+    }
+
+    .card-animate {
+        background: #fff;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .section-header {
         border-left: 6px solid #2563EB;
         padding-left: 12px;
@@ -16,11 +39,36 @@
         padding: 10px;
         border-radius: 0.25rem;
     }
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .brand-logo img {
+        width: 150px;
+    }
+
+    .price-badge {
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 480px) {
+        .card-animate {
+            margin: 1rem;
+            padding: 1.25rem;
+        }
+    }
 </style>
 @endsection
 
 @section('content')
-<div class="card shadow-sm p-4 mx-auto" style="max-width: 500px;">
+<div class="card-animate mx-auto mt-4" style="max-width: 500px;">
+
+    <div class="brand-logo">
+        <img src="https://www.srilankahosting.lk/logo.svg" alt="SriLanka Hosting Logo" />
+    </div>
 
     {{-- CAT2 --}}
     <div class="mb-5 p-4 rounded border border-gray-300 bg-white">
@@ -32,7 +80,8 @@
             <span class="text-red-600 font-bold ml-3">LKR 2600.00</span>
         </div>
         <div class="text-center">
-            <a href="{{ route('contact.page') }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center justify-center mx-auto">
+            <a href="{{ route('contact.page') }}"
+               class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center justify-center mx-auto w-fit">
                 <i class="bi bi-cart3 mr-2"></i> Buy Now
             </a>
         </div>
@@ -58,7 +107,8 @@
             </ul>
         </div>
         <div class="text-center mt-3">
-            <a href="{{ route('contact.page') }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center justify-center mx-auto">
+            <a href="{{ route('contact.page') }}"
+               class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center justify-center mx-auto w-fit">
                 <i class="bi bi-cart3 mr-2"></i> Buy Now
             </a>
         </div>
@@ -81,11 +131,12 @@
                         <i class="bi bi-globe2 text-blue-600"></i>
                         <span>{{ $domain }}</span>
                     </div>
-                    <div class="line-through text-gray-500">LKR 1000.00</div>
+                    <div class="line-through text-gray-500 price-badge">LKR 1000.00</div>
                 </div>
                 <div class="flex justify-between items-center">
                     <div class="text-red-500 font-semibold">LKR 950.00</div>
-                    <a href="{{ route('contact.page') }}" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 flex items-center">
+                    <a href="{{ route('contact.page') }}"
+                       class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 flex items-center">
                         <i class="bi bi-cart3 mr-1"></i> Buy Now
                     </a>
                 </div>
@@ -106,11 +157,12 @@
                         <i class="bi bi-globe2 text-blue-600"></i>
                         <span>{{ $domain }}</span>
                     </div>
-                    <div class="line-through text-gray-500">LKR 5000.00</div>
+                    <div class="line-through text-gray-500 price-badge">LKR 5000.00</div>
                 </div>
                 <div class="flex justify-between items-center">
                     <div class="text-red-500 font-semibold">LKR 4600.00</div>
-                    <a href="{{ route('contact.page') }}" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 flex items-center">
+                    <a href="{{ route('contact.page') }}"
+                       class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 flex items-center">
                         <i class="bi bi-cart3 mr-1"></i> Buy Now
                     </a>
                 </div>
